@@ -160,6 +160,35 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Khadija162/Enterprise-Multi-Agent-AI-Platform",
   },
   {
+    slug: "autonomous-coding-agent-github-issue-resolution",
+    eyebrow: "Agentic AI + Software Engineering Automation",
+    title: "Autonomous Coding Agent for GitHub Issue Resolution",
+    shortTitle: "Autonomous Coding Agent",
+    summary:
+      "An autonomous AI software-engineering agent that turns GitHub issues and development tasks into validated code changes by exploring repositories, planning multi-file edits, executing tools in isolated environments, and iteratively debugging against tests, linting and type checks.",
+    tags: ["Agentic AI", "Python + FastAPI", "LLM Tool Calling", "Code Intelligence", "Docker Sandboxing", "Automated Testing"],
+    challenge:
+      "Reliable autonomous coding requires much more than generating a patch from a prompt. An agent must understand an unfamiliar repository, select the right files without overflowing the model context, plan coordinated changes, execute commands safely, recover from failed attempts, and validate that the final patch actually solves the requested issue without introducing regressions. This project treats generated code as a hypothesis that must be verified through execution feedback.",
+    approach: [
+      "Use a state-machine-based reasoning and execution loop that moves from issue analysis and repository exploration to planning, editing, validation, failure analysis and replanning.",
+      "Retrieve repository context selectively using file search, source inspection, semantic retrieval, symbol and dependency information, and Tree-sitter / abstract-syntax-tree analysis instead of loading the entire codebase into the language-model context.",
+      "Expose controlled tools for file discovery, code search, source inspection, editing, terminal execution, Git operations and test execution, with structured outputs for plans, tool calls and validation results.",
+      "Execute generated commands inside Docker sandboxes with restricted filesystem access, predefined tool permissions, execution budgets and policy controls for potentially dangerous operations.",
+      "Validate every implementation with repository-appropriate unit tests, linting, formatting and static type checks, then use compiler errors, test failures and runtime feedback to drive iterative self-correction.",
+      "Persist task state, previous actions, execution events, Git diffs and detailed traces so long-running tasks remain inspectable, debuggable and recoverable across multiple agent iterations.",
+    ],
+    contributions: [
+      "Designed the modular Python/FastAPI architecture and state-machine orchestration for autonomous software-engineering tasks",
+      "Implemented repository intelligence, selective context retrieval and large-codebase context management",
+      "Built planning, LLM tool/function calling, multi-file editing and iterative debugging workflows",
+      "Integrated Docker-based sandbox execution, bounded tool permissions, execution budgets and human-approval controls",
+      "Implemented automated validation using tests, linting, formatting, type checking, Git diffs and change tracking",
+      "Developed an evaluation pipeline for bugs, feature work, test repair, refactoring, type errors, API behavior and edge cases",
+    ],
+    outcome:
+      "The final system demonstrates a closed-loop autonomous software-engineering workflow in which an LLM can understand repository context, plan and modify code, observe execution results, recover from failures and produce a validated Git diff with an implementation summary. The project brings together agentic AI architecture, code intelligence, retrieval, sandboxed execution, software-quality automation, observability and systematic evaluation.",
+  },
+  {
     slug: "water-distribution-ai-monitoring",
     eyebrow: "Artificial Intelligence + Water Infrastructure",
     title: "AI-Enabled Monitoring for Water Distribution Systems",

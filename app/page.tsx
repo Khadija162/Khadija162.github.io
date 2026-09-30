@@ -121,13 +121,13 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Selected projects"
             title="AI research and engineering for real technical systems."
-            copy="Case studies focused on machine learning, LLMs, intelligent monitoring, distributed systems and reliable software architecture."
+            copy="Case studies focused on agentic AI, machine learning, LLMs, intelligent monitoring, distributed systems and reliable software architecture."
           />
           <div className="featuredProjectWrap">
             <ProjectCard project={projects[0]} featured />
           </div>
           <div className="projectGrid">
-            {projects.slice(1, 4).map((project) => <ProjectCard key={project.slug} project={project} />)}
+            {projects.slice(1, 5).map((project) => <ProjectCard key={project.slug} project={project} />)}
           </div>
           <div className="sectionAction"><Link className="button buttonSecondary" href="/projects">View all projects</Link></div>
         </div>

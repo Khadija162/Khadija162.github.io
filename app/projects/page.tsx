@@ -15,7 +15,7 @@ export default function ProjectsPage() {
           <p className="eyebrow">Projects / Case studies</p>
           <h1>AI, software and research systems.</h1>
           <p>
-            Selected work covering machine learning, graph AI, intelligent monitoring, distributed systems and research-oriented software engineering.
+            Selected work covering agentic AI, machine learning, graph AI, intelligent monitoring, distributed systems and research-oriented software engineering.
           </p>
         </div>
         <div className="projectsPageGrid">
